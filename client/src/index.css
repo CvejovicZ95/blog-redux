@@ -5,6 +5,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
 header {
     background-color: #333;
     color: #fff;
@@ -29,10 +33,6 @@ nav ul {
 nav ul li {
     margin-left: 20px;
     cursor: pointer;
-}
-
-nav ul li:hover {
-    text-decoration: underline;
 }
 
 /* BlogList styles */
@@ -118,4 +118,50 @@ nav ul li:hover {
     color: #555;
     margin-top: 10px;
     display: block;
+}
+
+/* Glavni kontejner za korisnike */
+.users {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Naslov */
+.users h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Lista korisnika */
+.users-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stil za svaki pojedinačni korisnički element */
+.single-user {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+/* Hover efekat za korisnički element */
+.single-user:hover {
+    background-color: #e0f7fa;
+}
+
+/* Tekst korisničkog imena */
+.single-user {
+    color: #00796b;
 }
