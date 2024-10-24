@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+/* BlogList styles */
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* BlogExcerpt styles */
+.blog-excerpt {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-excerpt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-excerpt h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.blog-excerpt p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.blog-excerpt h3 {
+    color: #007bff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.blog-excerpt h3:hover {
+    text-decoration: underline;
+}
+
+/* TimeAgo styles */
+.timeago {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* ReactionButtons styles */
+.reaction-buttons {
+    margin-top: 10px;
+}
+
+.reactionButton {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+}
+
+.reactionButton:hover {
+    transform: scale(1.1);
+}
+
+.author-and-time {
+    align-items: center;
+    gap: 10px; /* Razmak između autora i vremena */
+    font-size: 0.9rem; /* Smanji font za oba */
+    color: #555; /* Ujednači boju */
+    margin-top: 10px; /* Malo prostora iznad */
+}
+
+.post-author {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+    display: block;
+}
