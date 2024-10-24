@@ -4,6 +4,9 @@ import dotenv from 'dotenv'
 
 import { connect } from './src/db/connectDB.js'
 
+import { blogsRouter } from "./src/routes/blogRoutes.js"
+import { usersRoutes } from './src/routes/usersRoutes.js'
+
 const app = express()
 dotenv.config()
 
@@ -17,6 +20,9 @@ const corsOptions = {
 
 app.use(express.json())
 app.use(cors(corsOptions))
+
+app.use('/api', blogsRouter)
+app.use('/api', usersRoutes)
 
 app.listen(PORT, () => {
   connect()
