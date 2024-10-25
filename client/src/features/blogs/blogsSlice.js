@@ -1,11 +1,15 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import { createSlice, createAsyncThunk, createSelector, createEntityAdapter } from "@reduxjs/toolkit"
 import { getBlogs } from "../../api/blogsApi";
 
-const initialState = {
-    blogs: [],
+const blogsAdapter = createEntityAdapter({
+    selectId: (blog) => blog._id,
+    sortComparer: (a, b) => new Date(b.created_at) - new Date(a.created_at)
+})
+
+const initialState = blogsAdapter.getInitialState({
     status: 'idle', // 'idle', | 'loading' | 'succeeded', | 'error' 
     error: null
-};
+})
 
 export const fetchBlogs = createAsyncThunk('blogs/fetchBlogs' , async (_, { rejectWithValue }) => {
     try {
@@ -26,8 +30,8 @@ const blogsSlice = createSlice({
                 state.status = 'pending'
             })
             .addCase(fetchBlogs.fulfilled, (state, action) => {
-                state.blogs = action.payload
                 state.status = 'succeeded'
+                blogsAdapter.setAll(state, action.payload)
             })
             .addCase(fetchBlogs.rejected, (state, action) => {
                 state.status = 'failed'
@@ -36,16 +40,17 @@ const blogsSlice = createSlice({
     }
 })
 
-export const selectAllBlogs = (state) => state.blogs.blogs
+export const {
+    selectAll: selectAllBlogs,
+    selectById: selectBlogById
+} = blogsAdapter.getSelectors(state => state.blogs)
+
 export const getBlogsStatus = (state) => state.blogs.status
 export const getBlogsError = (state) => state.blogs.error
 
-export const selectBlogById = (state, blogId) => 
-    state.blogs.blogs.find(blog => blog._id === blogId);
-
-/*export const selectBlogsByUser = createSelector(
+export const selectBlogsByUser = createSelector(
     [selectAllBlogs, (state, userId) => userId],
     (blogs, userId) => blogs.filter(blog => blog.userId._id === userId)
-)*/
+)
 
 export default blogsSlice.reducer
