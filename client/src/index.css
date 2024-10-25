@@ -7,7 +7,6 @@ body {
 
 a{
     text-decoration: none;
-    color: white;
 }
 header {
     background-color: #333;
@@ -33,6 +32,7 @@ nav ul {
 nav ul li {
     margin-left: 20px;
     cursor: pointer;
+    color: #fff;
 }
 
 /* BlogList styles */
@@ -164,4 +164,61 @@ nav ul li {
 /* Tekst korisničkog imena */
 .single-user {
     color: #00796b;
+}
+
+.single-blog{
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-username{
+    color: black;
+}
+
+.blog-title {
+    color: black;
+}
+
+.user-page {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-page h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.user-page ol {
+    padding-left: 20px;
+    text-decoration: underline;
+}
+
+.user-blogs {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.blog-title {
+    text-decoration: none;
+    color: #007bff; /* Plava boja za linkove */
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.blog-title:hover {
+    color: #0056b3; /* Tamnija plava kada se pređe mišem */
 }
