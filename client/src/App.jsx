@@ -3,6 +3,7 @@ import { Layout } from "./components/layout/Layout";
 import { BlogList } from "./components/homePage/BlogList"
 import { UsersList } from "./components/users/UsersList";
 import { SingleBlogPage } from "./components/singleBlogPage/SingleBlogPage";
+import { UserPage } from "./components/users/UsersPage";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Route index element={<BlogList />} />
         
         <Route path="users" element={<UsersList />} />
+
+        <Route path="user/:userId" element={<UserPage/>}/>
 
         <Route path="blog/:blogId" element={<SingleBlogPage/>}/>
 
