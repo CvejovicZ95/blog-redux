@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, createSelector, createEntityAdapter } from "@reduxjs/toolkit"
-import { getBlogs } from "../../api/blogsApi";
+import { createBlog, getBlogs } from "../../api/blogsApi";
 
 const blogsAdapter = createEntityAdapter({
     selectId: (blog) => blog._id,
@@ -20,6 +20,16 @@ export const fetchBlogs = createAsyncThunk('blogs/fetchBlogs' , async (_, { reje
     }
 })
 
+export const addNewBlog = createAsyncThunk('blogs/newBlog', async (newBlog, {
+    rejectWithValue }) => {
+        try {
+            const response = await createBlog(newBlog.title, newBlog.content, newBlog.userId)
+            return response;
+        } catch (error) {
+            return rejectWithValue(error.message)
+        }
+    })
+
 const blogsSlice = createSlice({
     name:'blogs',
     initialState,
@@ -28,6 +38,9 @@ const blogsSlice = createSlice({
         builder
             .addCase(fetchBlogs.pending, (state) => {
                 state.status = 'pending'
+            })
+            .addCase(addNewBlog.fulfilled, (state, action) => {
+                blogsAdapter.addOne(state, action.payload)
             })
             .addCase(fetchBlogs.fulfilled, (state, action) => {
                 state.status = 'succeeded'

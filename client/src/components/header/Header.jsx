@@ -8,7 +8,7 @@ export const Header = () => {
             <nav>
                 <ul>
                     <Link to={'/'}><li>Home</li></Link>
-                    <li>Post</li>
+                    <Link to={'/postBlog'}><li>New Blog</li></Link>
                     <Link to={'/users'}><li>Users</li></Link>
                 </ul>
             </nav>
