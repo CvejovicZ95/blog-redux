@@ -38,7 +38,7 @@ export const createBlog = async (title, content, userId) => {
     }
 }
 
-export const updateReactionsOnPost = async (id, emoji) => {
+export const updateReactionsOnBlog = async (id, emoji) => {
     try {
         const response = await fetch(`${apiUrl}/api/blogs/${id}`, {
             method: "PUT",

@@ -1,15 +1,15 @@
 import React from "react";
 
 const reactionEmoji = {
-    thumbsUp: { emoji: "👍", type: "thumbsUp", value: 0 },
-    love: { emoji: "❤️", type: "love", value: 0 },
-    laugh: { emoji: "😂", type: "laugh", value: 0 },
-    surprised: { emoji: "😮", type: "surprised", value: 0 },
-    sad: { emoji: "😢", type: "sad", value: 0 },
+    thumbsUp: { emoji: "👍", type: "thumbsUp" },
+    love: { emoji: "❤️", type: "love" },
+    laugh: { emoji: "😂", type: "laugh" },
+    surprised: { emoji: "😮", type: "surprised" },
+    sad: { emoji: "😢", type: "sad" },
 };
 
 
-export const ReactionButtons = () => {
+export const ReactionButtons = ({ blog }) => {
     const reactionButtons = Object.entries(reactionEmoji).map(([name, emoji]) => {
         return (
             <button
@@ -17,7 +17,7 @@ export const ReactionButtons = () => {
                 type="button"
                 className="reactionButton"
             >
-                {emoji.emoji} {emoji.value}
+                {emoji.emoji} {blog.reactions[name]}
             </button>
         );
     });
