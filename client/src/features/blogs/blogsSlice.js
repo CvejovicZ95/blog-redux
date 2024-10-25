@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import { createSlice, createAsyncThunk, createSelector } from "@reduxjs/toolkit"
 import { getBlogs } from "../../api/blogsApi";
 
 const initialState = {
@@ -42,5 +42,10 @@ export const getBlogsError = (state) => state.blogs.error
 
 export const selectBlogById = (state, blogId) => 
     state.blogs.blogs.find(blog => blog._id === blogId);
+
+export const selectBlogsByUser = createSelector(
+    [selectAllBlogs, (state, userId) => userId],
+    (blogs, userId) => blogs.filter(blog => blog.userId._id === userId)
+)
 
 export default blogsSlice.reducer
