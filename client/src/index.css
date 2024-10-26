@@ -5,9 +5,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 header {
     background-color: #333;
     color: #fff;
@@ -35,7 +36,6 @@ nav ul li {
     color: #fff;
 }
 
-/* BlogList styles */
 .blog-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -45,7 +45,6 @@ nav ul li {
     margin: 0 auto;
 }
 
-/* BlogExcerpt styles */
 .blog-excerpt {
     background-color: #f9f9f9;
     padding: 20px;
@@ -81,13 +80,11 @@ nav ul li {
     text-decoration: underline;
 }
 
-/* TimeAgo styles */
 .timeago {
     font-size: 0.9rem;
     color: #999;
 }
 
-/* ReactionButtons styles */
 .reaction-buttons {
     margin-top: 10px;
 }
@@ -107,10 +104,10 @@ nav ul li {
 
 .author-and-time {
     align-items: center;
-    gap: 10px; /* Razmak između autora i vremena */
-    font-size: 0.9rem; /* Smanji font za oba */
-    color: #555; /* Ujednači boju */
-    margin-top: 10px; /* Malo prostora iznad */
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
 }
 
 .post-author {
@@ -120,7 +117,6 @@ nav ul li {
     display: block;
 }
 
-/* Glavni kontejner za korisnike */
 .users {
     padding: 20px;
     background-color: #f4f4f4;
@@ -130,7 +126,6 @@ nav ul li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Naslov */
 .users h2 {
     text-align: center;
     font-size: 1.8rem;
@@ -138,14 +133,12 @@ nav ul li {
     margin-bottom: 20px;
 }
 
-/* Lista korisnika */
 .users-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-/* Stil za svaki pojedinačni korisnički element */
 .single-user {
     padding: 10px;
     margin: 5px 0;
@@ -154,19 +147,14 @@ nav ul li {
     border-radius: 4px;
     transition: background-color 0.3s ease;
     font-size: 1.1rem;
+    color: #00796b;
 }
 
-/* Hover efekat za korisnički element */
 .single-user:hover {
     background-color: #e0f7fa;
 }
 
-/* Tekst korisničkog imena */
-.single-user {
-    color: #00796b;
-}
-
-.single-blog{
+.single-blog {
     text-align: center;
     width: 600px;
     margin: auto;
@@ -177,7 +165,7 @@ nav ul li {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.single-username{
+.single-username {
     color: black;
 }
 
@@ -214,64 +202,63 @@ nav ul li {
 
 .blog-title {
     text-decoration: none;
-    color: #007bff; /* Plava boja za linkove */
+    color: #007bff;
     font-size: 18px;
     transition: color 0.3s;
 }
 
 .blog-title:hover {
-    color: #0056b3; /* Tamnija plava kada se pređe mišem */
+    color: #0056b3;
 }
 
-
 form {
-    max-width: 600px; /* Maksimalna širina forme */
-    margin: 0 auto; /* Centriranje forme */
-    padding: 20px; /* Unutrašnji razmak */
-    border: 1px solid #ccc; /* Granica oko forme */
-    border-radius: 8px; /* Zaobljeni uglovi */
-    background-color: #f9f9f9; /* Pozadina forme */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sjena */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    display: block; /* Labela kao blok element */
-    margin-bottom: 5px; /* Razmak ispod labela */
-    font-weight: bold; /* Podebljavanje teksta */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-input[type="text"], 
-textarea, 
+input[type="text"],
+textarea,
 select {
-    width: 90%; /* Širina 100% */
-    padding: 10px; /* Unutrašnji razmak */
-    margin-bottom: 15px; /* Razmak ispod polja */
-    border: 1px solid #ccc; /* Granica oko polja */
-    border-radius: 4px; /* Zaobljeni uglovi */
-    font-size: 16px; /* Veličina fonta */
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 textarea {
-    resize: vertical; /* Omogućava promenu veličine vertikalno */
-    min-height: 100px; /* Minimalna visina textarea */
+    resize: vertical;
+    min-height: 100px;
 }
 
 .form-button {
-    background-color: #28a745; /* Zeleni background za dugme */
-    color: white; /* Bele slova na dugmetu */
-    border: none; /* Bez granice */
-    padding: 10px 15px; /* Unutrašnji razmak */
-    border-radius: 4px; /* Zaobljeni uglovi */
-    font-size: 16px; /* Veličina fonta */
-    cursor: pointer; /* Pokazivač za dugme */
-    transition: background-color 0.3s; /* Animacija pozadine */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .form-button:hover {
-    background-color: #218838; /* Tamnija zelena kada se pređe mišem */
+    background-color: #218838;
 }
 
 .form-button:disabled {
-    background-color: #ccc; /* Siva pozadina kada je dugme onemogućeno */
-    cursor: not-allowed; /* Pokazivač kada je dugme onemogućeno */
+    background-color: #ccc;
+    cursor: not-allowed;
 }
