@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 
 import { connect } from './src/db/connectDB.js'
 
-import { blogsRouter } from "./src/routes/blogRoutes.js"
+import { blogsRouter } from './src/routes/blogRoutes.js'
 import { usersRoutes } from './src/routes/usersRoutes.js'
 
 const app = express()

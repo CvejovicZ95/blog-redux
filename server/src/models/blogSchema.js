@@ -9,7 +9,7 @@ const blogsSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  userId: { 
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
@@ -19,7 +19,7 @@ const blogsSchema = new mongoose.Schema({
     love: { type: Number, default: 0 },
     laugh: { type: Number, default: 0 },
     surprised: { type: Number, default: 0 },
-    sad: { type: Number, default: 0 },
+    sad: { type: Number, default: 0 }
   }
 }, {
   timestamps: {
