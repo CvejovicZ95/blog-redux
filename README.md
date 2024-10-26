@@ -1,4 +1,4 @@
-# Blog
+# Blog-Redux
 
 ## Project Overview
 
@@ -6,7 +6,7 @@ This project is a classic blog application where users can create, edit, delete,
 
 ## Features
 
-- **Post Management:**
+- **Blog Management:**
 
   - Create Blog: Users can create blogs with title, content, and author.
   - Edit Blogs: Users can modify or remove blogs.
